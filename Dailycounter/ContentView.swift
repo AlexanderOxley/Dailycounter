@@ -10,12 +10,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        ScrollView {
+            VStack {
+                CounterView(number: 0, name: "Counter 1")
+                CounterView(number: 0, name: "Counter 2")
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        //        .previewDevice("iPhone 7")
     }
 }
